@@ -1,0 +1,9 @@
+C:\Users\ddedeaga\source\repos\Laborator2\bin\Debug\Laborator2.exe.config
+C:\Users\ddedeaga\source\repos\Laborator2\bin\Debug\Laborator2.exe
+C:\Users\ddedeaga\source\repos\Laborator2\bin\Debug\Laborator2.pdb
+C:\Users\ddedeaga\source\repos\Laborator2\obj\Debug\Laborator2.csprojAssemblyReference.cache
+C:\Users\ddedeaga\source\repos\Laborator2\obj\Debug\Laborator2.Calculator.resources
+C:\Users\ddedeaga\source\repos\Laborator2\obj\Debug\Laborator2.Properties.Resources.resources
+C:\Users\ddedeaga\source\repos\Laborator2\obj\Debug\Laborator2.csproj.GenerateResource.cache
+C:\Users\ddedeaga\source\repos\Laborator2\obj\Debug\Laborator2.exe
+C:\Users\ddedeaga\source\repos\Laborator2\obj\Debug\Laborator2.pdb

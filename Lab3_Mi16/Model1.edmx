@@ -1,0 +1,172 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<edmx:Edmx Version="3.0" xmlns:edmx="http://schemas.microsoft.com/ado/2009/11/edmx">
+  <!-- EF Runtime content -->
+  <edmx:Runtime>
+    <!-- SSDL content -->
+    <edmx:StorageModels>
+    <Schema Namespace="Model1.Store" Alias="Self" Provider="System.Data.SqlClient" ProviderManifestToken="2012" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+  <EntityContainer Name="Model1StoreContainer">
+    <EntitySet Name="Users" EntityType="Model1.Store.Users" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="Data" EntityType="Model1.Store.Data" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="SpecialProperties" EntityType="Model1.Store.SpecialProperties" store:Type="Tables" Schema="dbo" />
+    <AssociationSet Name="DataSpecialProperties" Association="Model1.Store.DataSpecialProperties">
+      <End Role="Data" EntitySet="Data" />
+      <End Role="SpecialProperties" EntitySet="SpecialProperties" />
+    </AssociationSet>
+  </EntityContainer>
+  <EntityType Name="Users">
+    <Key>
+      <PropertyRef Name="userID" />
+    </Key>
+    <Property Name="userID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="firstName" Type="nvarchar(max)" Nullable="false" />
+    <Property Name="lastName" Type="nvarchar(max)" Nullable="false" />
+    <Property Name="password" Type="nvarchar(max)" Nullable="false" />
+    <Property Name="email" Type="nvarchar(max)" Nullable="false" />
+    <Property Name="phone" Type="nvarchar(max)" Nullable="false" />
+  </EntityType>
+  <EntityType Name="Data">
+    <Key>
+      <PropertyRef Name="dataId" />
+    </Key>
+    <Property Name="dataId" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="dataType" Type="nvarchar(max)" Nullable="false" />
+    <Property Name="creationDate" Type="time" Nullable="false" />
+    <Property Name="eventName" Type="nvarchar(max)" Nullable="false" />
+    <Property Name="people" Type="nvarchar(max)" Nullable="false" />
+    <Property Name="location" Type="nvarchar(max)" Nullable="false" />
+    <Property Name="path" Type="nvarchar(max)" Nullable="false" />
+    <Property Name="movedData" Type="bit" Nullable="false" />
+    <Property Name="favoriteData" Type="bit" Nullable="false" />
+  </EntityType>
+  <EntityType Name="SpecialProperties">
+    <Key>
+      <PropertyRef Name="dataId" />
+    </Key>
+    <Property Name="dataId" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="propertyID" Type="nvarchar(max)" Nullable="false" />
+    <Property Name="propertyName" Type="nvarchar(max)" Nullable="false" />
+    <Property Name="propertyDescription" Type="nvarchar(max)" Nullable="false" />
+    <Property Name="Datum_dataId" Type="int" Nullable="false" />
+  </EntityType>
+  <Association Name="DataSpecialProperties">
+    <End Role="Data" Type="Model1.Store.Data" Multiplicity="1" />
+    <End Role="SpecialProperties" Type="Model1.Store.SpecialProperties" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Data">
+        <PropertyRef Name="dataId" />
+      </Principal>
+      <Dependent Role="SpecialProperties">
+        <PropertyRef Name="Datum_dataId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+</Schema></edmx:StorageModels>
+    <!-- CSDL content -->
+    <edmx:ConceptualModels>
+      <Schema xmlns="http://schemas.microsoft.com/ado/2009/11/edm" xmlns:cg="http://schemas.microsoft.com/ado/2006/04/codegeneration" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" Namespace="Model1" Alias="Self" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" annotation:UseStrongSpatialTypes="false">
+        <EntityContainer Name="Model1Container" annotation:LazyLoadingEnabled="true">
+          <EntitySet Name="Users" EntityType="Model1.User" />
+          <EntitySet Name="Data" EntityType="Model1.Data" />
+          <EntitySet Name="SpecialProperties" EntityType="Model1.SpecialProperties" />
+        </EntityContainer>
+        <EntityType Name="User">
+          <Key>
+            <PropertyRef Name="userID" />
+          </Key>
+          <Property Name="userID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="firstName" Type="String" Nullable="false" />
+          <Property Name="lastName" Type="String" Nullable="false" />
+          <Property Name="password" Type="String" Nullable="false" />
+          <Property Name="email" Type="String" Nullable="false" />
+          <Property Name="phone" Type="String" Nullable="false" />
+        </EntityType>
+        <EntityType Name="Data">
+          <Key>
+            <PropertyRef Name="dataId" />
+          </Key>
+          <Property Name="dataId" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="dataType" Type="String" Nullable="false" />
+          <Property Name="creationDate" Type="Time" Nullable="false" />
+          <Property Name="eventName" Type="String" Nullable="false" />
+          <Property Name="people" Type="String" Nullable="false" />
+          <Property Name="location" Type="String" Nullable="false" />
+          <Property Name="path" Type="String" Nullable="false" />
+          <Property Name="movedData" Type="Boolean" Nullable="false" />
+          <Property Name="favoriteData" Type="Boolean" Nullable="false" />
+        </EntityType>
+        <EntityType Name="SpecialProperties">
+          <Key>
+            <PropertyRef Name="dataId" />
+          </Key>
+          <Property Name="dataId" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="propertyID" Type="String" Nullable="false" />
+          <Property Name="propertyName" Type="String" Nullable="false" />
+          <Property Name="propertyDescription" Type="String" Nullable="false" />
+        </EntityType>
+      </Schema>
+    </edmx:ConceptualModels>
+    <!-- C-S mapping content -->
+    <edmx:Mappings>
+    <Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
+  <EntityContainerMapping StorageEntityContainer="Model1StoreContainer" CdmEntityContainer="Model1Container">
+    <EntitySetMapping Name="Users">
+      <EntityTypeMapping TypeName="IsTypeOf(Model1.User)">
+        <MappingFragment StoreEntitySet="Users">
+          <ScalarProperty Name="userID" ColumnName="userID" />
+          <ScalarProperty Name="firstName" ColumnName="firstName" />
+          <ScalarProperty Name="lastName" ColumnName="lastName" />
+          <ScalarProperty Name="password" ColumnName="password" />
+          <ScalarProperty Name="email" ColumnName="email" />
+          <ScalarProperty Name="phone" ColumnName="phone" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Data">
+      <EntityTypeMapping TypeName="IsTypeOf(Model1.Data)">
+        <MappingFragment StoreEntitySet="Data">
+          <ScalarProperty Name="dataId" ColumnName="dataId" />
+          <ScalarProperty Name="dataType" ColumnName="dataType" />
+          <ScalarProperty Name="creationDate" ColumnName="creationDate" />
+          <ScalarProperty Name="eventName" ColumnName="eventName" />
+          <ScalarProperty Name="people" ColumnName="people" />
+          <ScalarProperty Name="location" ColumnName="location" />
+          <ScalarProperty Name="path" ColumnName="path" />
+          <ScalarProperty Name="movedData" ColumnName="movedData" />
+          <ScalarProperty Name="favoriteData" ColumnName="favoriteData" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="SpecialProperties">
+      <EntityTypeMapping TypeName="IsTypeOf(Model1.SpecialProperties)">
+        <MappingFragment StoreEntitySet="SpecialProperties">
+          <ScalarProperty Name="dataId" ColumnName="dataId" />
+          <ScalarProperty Name="propertyID" ColumnName="propertyID" />
+          <ScalarProperty Name="propertyName" ColumnName="propertyName" />
+          <ScalarProperty Name="propertyDescription" ColumnName="propertyDescription" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+  </EntityContainerMapping>
+</Mapping></edmx:Mappings>
+  </edmx:Runtime>
+  <!-- EF Designer content (DO NOT EDIT MANUALLY BELOW HERE) -->
+  <edmx:Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
+    <edmx:Connection>
+      <DesignerInfoPropertySet>
+        <DesignerProperty Name="MetadataArtifactProcessing" Value="EmbedInOutputAssembly" />
+      </DesignerInfoPropertySet>
+    </edmx:Connection>
+    <edmx:Options>
+      <DesignerInfoPropertySet>
+        <DesignerProperty Name="ValidateOnBuild" Value="true" />
+        <DesignerProperty Name="EnablePluralization" Value="True" />
+        <DesignerProperty Name="CodeGenerationStrategy" Value="None" />
+        <DesignerProperty Name="UseLegacyProvider" Value="False" />
+      </DesignerInfoPropertySet>
+    </edmx:Options>
+    <!-- Diagram content (shape and connector positions) -->
+    <edmx:Diagrams>
+    </edmx:Diagrams>
+  </edmx:Designer>
+</edmx:Edmx>

@@ -1,0 +1,59 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="Model1.Store" Alias="Self" Provider="System.Data.SqlClient" ProviderManifestToken="2012" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+  <EntityContainer Name="Model1StoreContainer">
+    <EntitySet Name="Users" EntityType="Model1.Store.Users" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="Data" EntityType="Model1.Store.Data" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="SpecialProperties" EntityType="Model1.Store.SpecialProperties" store:Type="Tables" Schema="dbo" />
+    <AssociationSet Name="DataSpecialProperties" Association="Model1.Store.DataSpecialProperties">
+      <End Role="Data" EntitySet="Data" />
+      <End Role="SpecialProperties" EntitySet="SpecialProperties" />
+    </AssociationSet>
+  </EntityContainer>
+  <EntityType Name="Users">
+    <Key>
+      <PropertyRef Name="userID" />
+    </Key>
+    <Property Name="userID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="firstName" Type="nvarchar(max)" Nullable="false" />
+    <Property Name="lastName" Type="nvarchar(max)" Nullable="false" />
+    <Property Name="password" Type="nvarchar(max)" Nullable="false" />
+    <Property Name="email" Type="nvarchar(max)" Nullable="false" />
+    <Property Name="phone" Type="nvarchar(max)" Nullable="false" />
+  </EntityType>
+  <EntityType Name="Data">
+    <Key>
+      <PropertyRef Name="dataId" />
+    </Key>
+    <Property Name="dataId" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="dataType" Type="nvarchar(max)" Nullable="false" />
+    <Property Name="creationDate" Type="time" Nullable="false" />
+    <Property Name="eventName" Type="nvarchar(max)" Nullable="false" />
+    <Property Name="people" Type="nvarchar(max)" Nullable="false" />
+    <Property Name="location" Type="nvarchar(max)" Nullable="false" />
+    <Property Name="path" Type="nvarchar(max)" Nullable="false" />
+    <Property Name="movedData" Type="bit" Nullable="false" />
+    <Property Name="favoriteData" Type="bit" Nullable="false" />
+  </EntityType>
+  <EntityType Name="SpecialProperties">
+    <Key>
+      <PropertyRef Name="dataId" />
+    </Key>
+    <Property Name="dataId" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="propertyID" Type="nvarchar(max)" Nullable="false" />
+    <Property Name="propertyName" Type="nvarchar(max)" Nullable="false" />
+    <Property Name="propertyDescription" Type="nvarchar(max)" Nullable="false" />
+    <Property Name="Datum_dataId" Type="int" Nullable="false" />
+  </EntityType>
+  <Association Name="DataSpecialProperties">
+    <End Role="Data" Type="Model1.Store.Data" Multiplicity="1" />
+    <End Role="SpecialProperties" Type="Model1.Store.SpecialProperties" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Data">
+        <PropertyRef Name="dataId" />
+      </Principal>
+      <Dependent Role="SpecialProperties">
+        <PropertyRef Name="Datum_dataId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+</Schema>

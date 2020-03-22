@@ -1,0 +1,52 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema xmlns="http://schemas.microsoft.com/ado/2009/11/edm" xmlns:cg="http://schemas.microsoft.com/ado/2006/04/codegeneration" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" Namespace="Model1" Alias="Self" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" annotation:UseStrongSpatialTypes="false">
+  <EntityContainer Name="Model1Container" annotation:LazyLoadingEnabled="true">
+    <EntitySet Name="Users" EntityType="Model1.User" />
+    <EntitySet Name="Data" EntityType="Model1.Data" />
+    <EntitySet Name="SpecialProperties" EntityType="Model1.SpecialProperties" />
+    <AssociationSet Name="DataSpecialProperties" Association="Model1.DataSpecialProperties">
+      <End EntitySet="Data" Role="Data" />
+      <End EntitySet="SpecialProperties" Role="SpecialProperties" />
+    </AssociationSet>
+  </EntityContainer>
+  <EntityType Name="User">
+    <Key>
+      <PropertyRef Name="userID" />
+    </Key>
+    <Property Name="userID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="firstName" Type="String" Nullable="false" />
+    <Property Name="lastName" Type="String" Nullable="false" />
+    <Property Name="password" Type="String" Nullable="false" />
+    <Property Name="email" Type="String" Nullable="false" />
+    <Property Name="phone" Type="String" Nullable="false" />
+  </EntityType>
+  <EntityType Name="Data">
+    <Key>
+      <PropertyRef Name="dataId" />
+    </Key>
+    <Property Name="dataId" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="dataType" Type="String" Nullable="false" />
+    <Property Name="creationDate" Type="Time" Nullable="false" />
+    <Property Name="eventName" Type="String" Nullable="false" />
+    <Property Name="people" Type="String" Nullable="false" />
+    <Property Name="location" Type="String" Nullable="false" />
+    <Property Name="path" Type="String" Nullable="false" />
+    <Property Name="movedData" Type="Boolean" Nullable="false" />
+    <Property Name="favoriteData" Type="Boolean" Nullable="false" />
+    <NavigationProperty Name="SpecialProperties" Relationship="Model1.DataSpecialProperties" FromRole="Data" ToRole="SpecialProperties" />
+  </EntityType>
+  <EntityType Name="SpecialProperties">
+    <Key>
+      <PropertyRef Name="dataId" />
+    </Key>
+    <Property Name="dataId" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="propertyID" Type="String" Nullable="false" />
+    <Property Name="propertyName" Type="String" Nullable="false" />
+    <Property Name="propertyDescription" Type="String" Nullable="false" />
+    <NavigationProperty Name="Datum" Relationship="Model1.DataSpecialProperties" FromRole="SpecialProperties" ToRole="Data" />
+  </EntityType>
+  <Association Name="DataSpecialProperties">
+    <End Type="Model1.Data" Multiplicity="1" Role="Data" />
+    <End Type="Model1.SpecialProperties" Multiplicity="*" Role="SpecialProperties" />
+  </Association>
+</Schema>

@@ -1,0 +1,31 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 16
+VisualStudioVersion = 16.0.29411.108
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ModelDesignFirst_L1", "ModelDesignFirst_L1.csproj", "{51873B92-B293-49AD-9A73-24DD30BED731}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "FormProiect2020", "..\FormProiect2020\FormProiect2020.csproj", "{0C849CA5-BAC1-48AA-B270-F46E6266563D}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{51873B92-B293-49AD-9A73-24DD30BED731}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{51873B92-B293-49AD-9A73-24DD30BED731}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{51873B92-B293-49AD-9A73-24DD30BED731}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{51873B92-B293-49AD-9A73-24DD30BED731}.Release|Any CPU.Build.0 = Release|Any CPU
+		{0C849CA5-BAC1-48AA-B270-F46E6266563D}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{0C849CA5-BAC1-48AA-B270-F46E6266563D}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{0C849CA5-BAC1-48AA-B270-F46E6266563D}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{0C849CA5-BAC1-48AA-B270-F46E6266563D}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {260010D7-3420-4307-9264-FD9396F2430D}
+	EndGlobalSection
+EndGlobal

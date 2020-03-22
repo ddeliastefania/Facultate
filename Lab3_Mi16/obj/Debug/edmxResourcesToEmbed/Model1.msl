@@ -1,0 +1,50 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
+  <EntityContainerMapping StorageEntityContainer="Model1StoreContainer" CdmEntityContainer="Model1Container">
+    <EntitySetMapping Name="Users">
+      <EntityTypeMapping TypeName="IsTypeOf(Model1.User)">
+        <MappingFragment StoreEntitySet="Users">
+          <ScalarProperty Name="userID" ColumnName="userID" />
+          <ScalarProperty Name="firstName" ColumnName="firstName" />
+          <ScalarProperty Name="lastName" ColumnName="lastName" />
+          <ScalarProperty Name="password" ColumnName="password" />
+          <ScalarProperty Name="email" ColumnName="email" />
+          <ScalarProperty Name="phone" ColumnName="phone" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Data">
+      <EntityTypeMapping TypeName="IsTypeOf(Model1.Data)">
+        <MappingFragment StoreEntitySet="Data">
+          <ScalarProperty Name="dataId" ColumnName="dataId" />
+          <ScalarProperty Name="dataType" ColumnName="dataType" />
+          <ScalarProperty Name="creationDate" ColumnName="creationDate" />
+          <ScalarProperty Name="eventName" ColumnName="eventName" />
+          <ScalarProperty Name="people" ColumnName="people" />
+          <ScalarProperty Name="location" ColumnName="location" />
+          <ScalarProperty Name="path" ColumnName="path" />
+          <ScalarProperty Name="movedData" ColumnName="movedData" />
+          <ScalarProperty Name="favoriteData" ColumnName="favoriteData" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="SpecialProperties">
+      <EntityTypeMapping TypeName="IsTypeOf(Model1.SpecialProperties)">
+        <MappingFragment StoreEntitySet="SpecialProperties">
+          <ScalarProperty Name="dataId" ColumnName="dataId" />
+          <ScalarProperty Name="propertyID" ColumnName="propertyID" />
+          <ScalarProperty Name="propertyName" ColumnName="propertyName" />
+          <ScalarProperty Name="propertyDescription" ColumnName="propertyDescription" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <AssociationSetMapping Name="DataSpecialProperties" TypeName="Model1.DataSpecialProperties" StoreEntitySet="SpecialProperties">
+      <EndProperty Name="Data">
+        <ScalarProperty Name="dataId" ColumnName="Datum_dataId" />
+      </EndProperty>
+      <EndProperty Name="SpecialProperties">
+        <ScalarProperty Name="dataId" ColumnName="dataId" />
+      </EndProperty>
+    </AssociationSetMapping>
+  </EntityContainerMapping>
+</Mapping>

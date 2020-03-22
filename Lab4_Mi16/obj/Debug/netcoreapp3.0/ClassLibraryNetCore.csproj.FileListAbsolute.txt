@@ -1,0 +1,9 @@
+C:\Users\ddedeaga\source\repos\ClassLibraryNetCore\obj\Debug\netcoreapp3.0\ClassLibraryNetCore.AssemblyInfoInputs.cache
+C:\Users\ddedeaga\source\repos\ClassLibraryNetCore\obj\Debug\netcoreapp3.0\ClassLibraryNetCore.AssemblyInfo.cs
+C:\Users\ddedeaga\source\repos\ClassLibraryNetCore\bin\Debug\netcoreapp3.0\ClassLibraryNetCore.deps.json
+C:\Users\ddedeaga\source\repos\ClassLibraryNetCore\bin\Debug\netcoreapp3.0\ClassLibraryNetCore.runtimeconfig.json
+C:\Users\ddedeaga\source\repos\ClassLibraryNetCore\bin\Debug\netcoreapp3.0\ClassLibraryNetCore.runtimeconfig.dev.json
+C:\Users\ddedeaga\source\repos\ClassLibraryNetCore\bin\Debug\netcoreapp3.0\ClassLibraryNetCore.dll
+C:\Users\ddedeaga\source\repos\ClassLibraryNetCore\bin\Debug\netcoreapp3.0\ClassLibraryNetCore.pdb
+C:\Users\ddedeaga\source\repos\ClassLibraryNetCore\obj\Debug\netcoreapp3.0\ClassLibraryNetCore.dll
+C:\Users\ddedeaga\source\repos\ClassLibraryNetCore\obj\Debug\netcoreapp3.0\ClassLibraryNetCore.pdb
