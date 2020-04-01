@@ -1,0 +1,11 @@
+C:\Users\ddedeaga\source\repos\ModelProiect2020\bin\Debug\ModelProiect2020.exe.config
+C:\Users\ddedeaga\source\repos\ModelProiect2020\bin\Debug\ModelProiect2020.exe
+C:\Users\ddedeaga\source\repos\ModelProiect2020\bin\Debug\ModelProiect2020.pdb
+C:\Users\ddedeaga\source\repos\ModelProiect2020\bin\Debug\EntityFramework.dll
+C:\Users\ddedeaga\source\repos\ModelProiect2020\bin\Debug\EntityFramework.SqlServer.dll
+C:\Users\ddedeaga\source\repos\ModelProiect2020\bin\Debug\EntityFramework.xml
+C:\Users\ddedeaga\source\repos\ModelProiect2020\bin\Debug\EntityFramework.SqlServer.xml
+C:\Users\ddedeaga\source\repos\ModelProiect2020\obj\Debug\ModelProiect2020.csprojAssemblyReference.cache
+C:\Users\ddedeaga\source\repos\ModelProiect2020\obj\Debug\ModelProiect2020.csproj.CopyComplete
+C:\Users\ddedeaga\source\repos\ModelProiect2020\obj\Debug\ModelProiect2020.exe
+C:\Users\ddedeaga\source\repos\ModelProiect2020\obj\Debug\ModelProiect2020.pdb

@@ -1,0 +1,42 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
+  <EntityContainerMapping StorageEntityContainer="Proiect2020StoreContainer" CdmEntityContainer="Proiect2020Container">
+    <EntitySetMapping Name="Users">
+      <EntityTypeMapping TypeName="IsTypeOf(Proiect2020.User)">
+        <MappingFragment StoreEntitySet="Users">
+          <ScalarProperty Name="UserID" ColumnName="UserID" />
+          <ScalarProperty Name="FirstName" ColumnName="FirstName" />
+          <ScalarProperty Name="LastName" ColumnName="LastName" />
+          <ScalarProperty Name="Password" ColumnName="Password" />
+          <ScalarProperty Name="Email" ColumnName="Email" />
+          <ScalarProperty Name="Phone" ColumnName="Phone" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Datas">
+      <EntityTypeMapping TypeName="IsTypeOf(Proiect2020.Data)">
+        <MappingFragment StoreEntitySet="Datas">
+          <ScalarProperty Name="DataID" ColumnName="DataID" />
+          <ScalarProperty Name="DateType" ColumnName="DateType" />
+          <ScalarProperty Name="CreationDate" ColumnName="CreationDate" />
+          <ScalarProperty Name="EventName" ColumnName="EventName" />
+          <ScalarProperty Name="People" ColumnName="People" />
+          <ScalarProperty Name="Location" ColumnName="Location" />
+          <ScalarProperty Name="Path" ColumnName="Path" />
+          <ScalarProperty Name="MovedData" ColumnName="MovedData" />
+          <ScalarProperty Name="FavoriteData" ColumnName="FavoriteData" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="SpecialProperties">
+      <EntityTypeMapping TypeName="IsTypeOf(Proiect2020.SpecialProperty)">
+        <MappingFragment StoreEntitySet="SpecialProperties">
+          <ScalarProperty Name="DataID" ColumnName="DataID" />
+          <ScalarProperty Name="PropertyID" ColumnName="PropertyID" />
+          <ScalarProperty Name="PropertyName" ColumnName="PropertyName" />
+          <ScalarProperty Name="PropertyDescription" ColumnName="PropertyDescription" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+  </EntityContainerMapping>
+</Mapping>
