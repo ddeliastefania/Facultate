@@ -1,0 +1,10 @@
+C:\Users\ddedeaga\Desktop\Anul3\TSP .Net\Facultate\Lab8_Mi16\GrpcGreeterClient\bin\Debug\netcoreapp3.0\GrpcGreeterClient.exe
+C:\Users\ddedeaga\Desktop\Anul3\TSP .Net\Facultate\Lab8_Mi16\GrpcGreeterClient\bin\Debug\netcoreapp3.0\GrpcGreeterClient.deps.json
+C:\Users\ddedeaga\Desktop\Anul3\TSP .Net\Facultate\Lab8_Mi16\GrpcGreeterClient\bin\Debug\netcoreapp3.0\GrpcGreeterClient.runtimeconfig.json
+C:\Users\ddedeaga\Desktop\Anul3\TSP .Net\Facultate\Lab8_Mi16\GrpcGreeterClient\bin\Debug\netcoreapp3.0\GrpcGreeterClient.runtimeconfig.dev.json
+C:\Users\ddedeaga\Desktop\Anul3\TSP .Net\Facultate\Lab8_Mi16\GrpcGreeterClient\bin\Debug\netcoreapp3.0\GrpcGreeterClient.dll
+C:\Users\ddedeaga\Desktop\Anul3\TSP .Net\Facultate\Lab8_Mi16\GrpcGreeterClient\bin\Debug\netcoreapp3.0\GrpcGreeterClient.pdb
+C:\Users\ddedeaga\Desktop\Anul3\TSP .Net\Facultate\Lab8_Mi16\GrpcGreeterClient\obj\Debug\netcoreapp3.0\GrpcGreeterClient.AssemblyInfoInputs.cache
+C:\Users\ddedeaga\Desktop\Anul3\TSP .Net\Facultate\Lab8_Mi16\GrpcGreeterClient\obj\Debug\netcoreapp3.0\GrpcGreeterClient.AssemblyInfo.cs
+C:\Users\ddedeaga\Desktop\Anul3\TSP .Net\Facultate\Lab8_Mi16\GrpcGreeterClient\obj\Debug\netcoreapp3.0\GrpcGreeterClient.dll
+C:\Users\ddedeaga\Desktop\Anul3\TSP .Net\Facultate\Lab8_Mi16\GrpcGreeterClient\obj\Debug\netcoreapp3.0\GrpcGreeterClient.pdb
