@@ -64,22 +64,22 @@ namespace FormProiect2020
 
         private void button1_Click_1(object sender, EventArgs e)
         {
-            new MyPhotos().CreateUser(FirstName.Text, LastName.Text, Password.Text, Email.Text, Phone.Text);
+            new ProjectClient().CreateUser(FirstName.Text, LastName.Text, Password.Text, Email.Text, Phone.Text);
         }
 
         private void update_Click(object sender, EventArgs e)
         {
-            new MyPhotos().UpdateUser(Convert.ToInt32(userID.Text), FirstName.Text, LastName.Text, Password.Text, Email.Text, Phone.Text);
+            new ProjectClient().UpdateUser(Convert.ToInt32(userID.Text), FirstName.Text, LastName.Text, Password.Text, Email.Text, Phone.Text);
         }
 
         private void load_Click(object sender, EventArgs e)
         {
-            new MyPhotos().GetUserById(Convert.ToInt32(userID.Text));
+            new ProjectClient().GetUserById(Convert.ToInt32(userID.Text));
         }
 
         private void delete_Click(object sender, EventArgs e)
         {
-            new MyPhotos().DeleteUser(Convert.ToInt32(userID.Text));
+            new ProjectClient().DeleteUser(Convert.ToInt32(userID.Text));
         }
 
         private void loginButton_Click(object sender, EventArgs e)
@@ -97,7 +97,7 @@ namespace FormProiect2020
             }
             else
             {
-                if(new MyPhotos().Login(emailLog.Text, textBox2.Text))
+                if(new ProjectClient().Login(emailLog.Text, textBox2.Text))
                     MessageBox.Show("Success");
                 else
                     MessageBox.Show("Password or username not found");

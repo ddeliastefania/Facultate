@@ -69,6 +69,7 @@
       <DesignTime>True</DesignTime>
       <DependentUpon>masterDataSet.xsd</DependentUpon>
     </Compile>
+    <Compile Include="proxy.cs" />
     <Compile Include="SpecialPropertiesForm.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -130,10 +131,6 @@
     <WCFMetadata Include="Connected Services\" />
   </ItemGroup>
   <ItemGroup>
-    <ProjectReference Include="..\..\ModelProiect2020\ModelProiect2020.csproj">
-      <Project>{0576e291-2a68-4c3f-a7fa-7e8d275c2573}</Project>
-      <Name>ModelProiect2020</Name>
-    </ProjectReference>
     <ProjectReference Include="..\..\ModelProiect2020\ObjectWCF\ObjectWCF.csproj">
       <Project>{FFBF401A-D1E6-4C30-9B50-26133CACE390}</Project>
       <Name>ObjectWCF</Name>

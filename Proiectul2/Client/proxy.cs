@@ -398,6 +398,12 @@ public interface IProject
     [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/InterfaceUser/GetAllUsers", ReplyAction="http://tempuri.org/InterfaceUser/GetAllUsersResponse")]
     System.Threading.Tasks.Task<ModelProiect2020.User[]> GetAllUsersAsync();
     
+    [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/InterfaceUser/Login", ReplyAction="http://tempuri.org/InterfaceUser/LoginResponse")]
+    bool Login(string email, string password);
+    
+    [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/InterfaceUser/Login", ReplyAction="http://tempuri.org/InterfaceUser/LoginResponse")]
+    System.Threading.Tasks.Task<bool> LoginAsync(string email, string password);
+    
     [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/InterfaceData/CreateData", ReplyAction="http://tempuri.org/InterfaceData/CreateDataResponse")]
     ModelProiect2020.Data CreateData(string dateType, System.DateTime creationDate, string eventName, string people, string location, string path);
     
@@ -535,6 +541,16 @@ public partial class ProjectClient : System.ServiceModel.ClientBase<IProject>, I
     public System.Threading.Tasks.Task<ModelProiect2020.User[]> GetAllUsersAsync()
     {
         return base.Channel.GetAllUsersAsync();
+    }
+    
+    public bool Login(string email, string password)
+    {
+        return base.Channel.Login(email, password);
+    }
+    
+    public System.Threading.Tasks.Task<bool> LoginAsync(string email, string password)
+    {
+        return base.Channel.LoginAsync(email, password);
     }
     
     public ModelProiect2020.Data CreateData(string dateType, System.DateTime creationDate, string eventName, string people, string location, string path)
