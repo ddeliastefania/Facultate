@@ -1,0 +1,11 @@
+C:\Users\ddedeaga\Desktop\Anul3\TSP .Net\Facultate\Lab6_Mi16\PostComment\bin\Debug\PostComment.dll.config
+C:\Users\ddedeaga\Desktop\Anul3\TSP .Net\Facultate\Lab6_Mi16\PostComment\bin\Debug\PostComment.dll
+C:\Users\ddedeaga\Desktop\Anul3\TSP .Net\Facultate\Lab6_Mi16\PostComment\bin\Debug\PostComment.pdb
+C:\Users\ddedeaga\Desktop\Anul3\TSP .Net\Facultate\Lab6_Mi16\PostComment\bin\Debug\EntityFramework.dll
+C:\Users\ddedeaga\Desktop\Anul3\TSP .Net\Facultate\Lab6_Mi16\PostComment\bin\Debug\EntityFramework.SqlServer.dll
+C:\Users\ddedeaga\Desktop\Anul3\TSP .Net\Facultate\Lab6_Mi16\PostComment\bin\Debug\EntityFramework.xml
+C:\Users\ddedeaga\Desktop\Anul3\TSP .Net\Facultate\Lab6_Mi16\PostComment\bin\Debug\EntityFramework.SqlServer.xml
+C:\Users\ddedeaga\Desktop\Anul3\TSP .Net\Facultate\Lab6_Mi16\PostComment\obj\Debug\PostComment.csprojAssemblyReference.cache
+C:\Users\ddedeaga\Desktop\Anul3\TSP .Net\Facultate\Lab6_Mi16\PostComment\obj\Debug\PostComment.csproj.CopyComplete
+C:\Users\ddedeaga\Desktop\Anul3\TSP .Net\Facultate\Lab6_Mi16\PostComment\obj\Debug\PostComment.dll
+C:\Users\ddedeaga\Desktop\Anul3\TSP .Net\Facultate\Lab6_Mi16\PostComment\obj\Debug\PostComment.pdb
