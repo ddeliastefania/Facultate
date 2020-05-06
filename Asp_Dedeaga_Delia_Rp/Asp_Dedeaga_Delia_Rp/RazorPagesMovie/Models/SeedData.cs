@@ -1,7 +1,3 @@
-﻿//#define Rating
-#if Rating
-// Seed without Rating
-#region snippet_1 
 using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.DependencyInjection;
 using RazorPagesMovie.Data;
@@ -10,7 +6,7 @@ using System.Linq;
 
 namespace RazorPagesMovie.Models
 {
-    public static class SeedData
+    public class SeedData
     {
         public static void Initialize(IServiceProvider serviceProvider)
         {
@@ -24,23 +20,23 @@ namespace RazorPagesMovie.Models
                     return;   // DB has been seeded
                 }
 
-                #region snippet1
                 context.Movie.AddRange(
                     new Movie
                     {
                         Title = "When Harry Met Sally",
                         ReleaseDate = DateTime.Parse("1989-2-12"),
                         Genre = "Romantic Comedy",
-                        Price = 7.99M
+                        Price = 7.99M,
+                        Rating = "R"
                     },
-                #endregion
 
                     new Movie
                     {
                         Title = "Ghostbusters ",
                         ReleaseDate = DateTime.Parse("1984-3-13"),
                         Genre = "Comedy",
-                        Price = 8.99M
+                        Price = 8.99M,
+                        Rating = "G"
                     },
 
                     new Movie
@@ -48,7 +44,8 @@ namespace RazorPagesMovie.Models
                         Title = "Ghostbusters 2",
                         ReleaseDate = DateTime.Parse("1986-2-23"),
                         Genre = "Comedy",
-                        Price = 9.99M
+                        Price = 9.99M,
+                        Rating = "G"
                     },
 
                     new Movie
@@ -56,13 +53,13 @@ namespace RazorPagesMovie.Models
                         Title = "Rio Bravo",
                         ReleaseDate = DateTime.Parse("1959-4-15"),
                         Genre = "Western",
-                        Price = 3.99M
+                        Price = 3.99M,
+                        Rating = "NA"
                     }
+
                 );
                 context.SaveChanges();
             }
         }
     }
 }
-#endregion
-#endif
