@@ -1,0 +1,89 @@
+﻿@page
+@model ASPNetCore.Media.IndexModel
+
+@{
+    ViewData["Title"] = "Index";
+}
+
+<h1>Index</h1>
+<form method="post">
+    <p>
+        <b>Favorites</b> <input type="checkbox" name="Favourite" />
+        <b>Keyword</b> <input type="text" name="Keyword"/>
+    </p>
+    <p>
+        <input type="submit" value="Filter" />
+        
+    </p>
+</form>
+<p>
+    <a asp-page="Create">Create New</a>
+</p>
+<table class="table">
+    <thead>
+        <tr>
+            <th>
+                @Html.DisplayNameFor(model => model.DataDTO[0].DateType)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.DataDTO[0].CreationDate)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.DataDTO[0].EventName)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.DataDTO[0].People)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.DataDTO[0].Location)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.DataDTO[0].Path)
+            </th>
+            @*<th>
+                @Html.DisplayNameFor(model => model.DataDTO[0].MovedData)
+            </th>*@
+            <th>
+                @Html.DisplayNameFor(model => model.DataDTO[0].FavoriteData)
+            </th>
+            <th></th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var item in Model.DataDTO)
+        {
+            <tr>
+                <td>
+                    @Html.DisplayFor(modelItem => item.DateType)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.CreationDate)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.EventName)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.People)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.Location)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.Path)
+                </td>
+                @*<td>
+                    @Html.DisplayFor(modelItem => item.MovedData)
+                </td>*@
+                <td>
+                    @Html.DisplayFor(modelItem => item.FavoriteData)
+                </td>
+                <td>
+                    <a asp-page="./Edit" asp-route-id="@item.DataID">Edit</a> |
+                    <a asp-page="./Details" asp-route-id="@item.DataID">Details</a> |
+                </td>
+            </tr>
+        }
+        <b>No. Results: </b> @Model.NoResults
+        <b>Filters: </b>@Model.FilterCriteria
+    </tbody>
+</table>

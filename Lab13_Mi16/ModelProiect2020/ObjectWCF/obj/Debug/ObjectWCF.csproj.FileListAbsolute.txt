@@ -1,0 +1,12 @@
+C:\Users\ddedeaga\source\repos\ModelProiect2020\ObjectWCF\bin\Debug\ObjectWCF.dll
+C:\Users\ddedeaga\source\repos\ModelProiect2020\ObjectWCF\bin\Debug\ObjectWCF.pdb
+C:\Users\ddedeaga\source\repos\ModelProiect2020\ObjectWCF\bin\Debug\ModelProiect2020.exe
+C:\Users\ddedeaga\source\repos\ModelProiect2020\ObjectWCF\bin\Debug\EntityFramework.dll
+C:\Users\ddedeaga\source\repos\ModelProiect2020\ObjectWCF\bin\Debug\ModelProiect2020.pdb
+C:\Users\ddedeaga\source\repos\ModelProiect2020\ObjectWCF\bin\Debug\ModelProiect2020.exe.config
+C:\Users\ddedeaga\source\repos\ModelProiect2020\ObjectWCF\bin\Debug\EntityFramework.xml
+C:\Users\ddedeaga\source\repos\ModelProiect2020\ObjectWCF\obj\Debug\ObjectWCF.csprojAssemblyReference.cache
+C:\Users\ddedeaga\source\repos\ModelProiect2020\ObjectWCF\obj\Debug\ObjectWCF.csproj.CoreCompileInputs.cache
+C:\Users\ddedeaga\source\repos\ModelProiect2020\ObjectWCF\obj\Debug\ObjectWCF.csproj.CopyComplete
+C:\Users\ddedeaga\source\repos\ModelProiect2020\ObjectWCF\obj\Debug\ObjectWCF.dll
+C:\Users\ddedeaga\source\repos\ModelProiect2020\ObjectWCF\obj\Debug\ObjectWCF.pdb
